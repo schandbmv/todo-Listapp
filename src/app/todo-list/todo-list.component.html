@@ -1,0 +1,131 @@
+<div class="Todo-List" style="padding: 40px; display: flex;">
+    
+    <div class="categories" style="border: 1px solid black;">
+        <div class="cat-list tabs" style="display: inline-grid; padding:20px">
+
+            <button class="Groceries" onclick="opentodoTab('Groceries')">Groceries</button>
+            <button class="Tools" onclick="opentodoTab('Tools')">Tools</button>
+            <button class="plan4today" onclick="opentodoTab('plan4today')">plan4today</button>
+            <button class="Miscellaneous" onclick="opentodoTab('Miscellaneous')">Miscellaneous</button>
+            
+        </div>
+    </div>
+    
+    <div class="tableWrapper" style="border: 1px solid black;">
+
+        <div id="Groceries" class="Groceries">
+            <h3>Groceries</h3>
+            
+            <div class="containerListItems" *ngFor="let groc of groclists; let i = index">
+
+                <div>
+                   <input type="checkbox" />
+                </div>
+                <div class="one">{{groc.name}}</div>
+                  <div class="three">
+                  <button class="btn btn-danger" (click)="deletegroc(i)">X</button>
+                </div>
+        
+              </div>
+        
+              <div class="groc" style="display: flex">
+        
+                <div class="form-group name">
+                  <input type="text" class="form-control input" id="name"  name="name" [(ngModel)]="groce.name" placeholder="Add groc..">
+                </div>
+                <div class="submitBtnContainer">
+                  <button type="submit" class="saveBtn btn btn-primary" (click)="addgroc()">ADD</button>
+                </div>
+                
+              </div>
+
+          </div>
+          
+          <div id="Tools" class="Tools">
+            <h3>Tools</h3>
+           
+            <div class="containerListItems" *ngFor="let Tools of Toolslists; let i = index">
+
+                <div>
+                    <input type="checkbox" />
+                 </div>
+                <div class="one">{{Tools.name}}</div>
+                  <div class="three">
+                  <button class="btn btn-danger" (click)="deleteTools(i)">X</button>
+                </div>
+        
+              </div>
+        
+              <div class="Tools" style="display: flex">
+        
+                <div class="form-group name">
+                  <input type="text" class="form-control input" id="name"  name="name" [(ngModel)]="tools.name" placeholder="Add Tools..">
+                </div>
+                <div class="submitBtnContainer">
+                  <button type="submit" class="saveBtn btn btn-primary" (click)="addTools()">ADD</button>
+                </div>
+                
+              </div>
+
+          </div>
+          
+          <div id="plan4today" class="plan4today">
+            <h3>plan4today</h3>
+           
+            <div class="containerListItems" *ngFor="let plan of planlists; let i = index">
+
+                <div>
+                    <input type="checkbox" />
+                 </div>
+                <div class="one">{{plan.name}}</div>
+                  <div class="three">
+                  <button class="btn btn-danger" (click)="deleteplan(i)">X</button>
+                </div>
+        
+              </div>
+        
+              <div class="plan" style="display: flex">
+        
+                <div class="form-group name">
+                  <input type="text" class="form-control input" id="name"  name="name" [(ngModel)]="plan.name" placeholder="Add plan..">
+                </div>
+                <div class="submitBtnContainer">
+                  <button type="submit" class="saveBtn btn btn-primary" (click)="addplan()">ADD</button>
+                </div>
+                
+              </div>
+
+          </div>
+
+      
+          <div id="Miscellaneous" class="Miscellaneous">
+            <h3>Miscellaneous</h3>
+           
+            <div class="containerListItems" *ngFor="let Misc of Misclists; let i = index">
+
+                <div>
+                    <input type="checkbox" />
+                 </div>
+                <div class="one">{{Misc.name}}</div>
+                  <div class="three">
+                  <button class="btn btn-danger" (click)="deleteMisc(i)">X</button>
+                </div>
+        
+              </div>
+        
+              <div class="Misc" style="display: flex">
+        
+                <div class="form-group name">
+                  <input type="text" class="form-control input" id="name"  name="name" [(ngModel)]="misc.name" placeholder="Add Misc..">
+                </div>
+                <div class="submitBtnContainer">
+                  <button type="submit" class="saveBtn btn btn-primary" (click)="addMisc()">ADD</button>
+                </div>
+                
+              </div>
+
+          </div>
+
+    
+    
+  </div>

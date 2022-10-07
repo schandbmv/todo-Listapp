@@ -1,0 +1,25 @@
+.tableWrapper {
+    padding: 0 20px 20px;
+    background:#f6f6f6;
+  }
+
+.containerTitle {
+    display:flex;
+    margin-top:20px;
+    padding-bottom: 10px;
+    font-size:12px;
+    font-weight:bold;
+  }
+
+.containerListItems {
+    display:flex;
+    padding-bottom: 10px;
+  }
+
+  .containerListItems .one{
+    width: 200px;
+  }
+
+ #Tools, #plan4today, #Miscellaneous{
+display: none; 
+}
